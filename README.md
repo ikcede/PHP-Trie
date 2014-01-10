@@ -24,45 +24,45 @@ Functions:
 * 	__Constructor__ - <br>
 	_params_ - $data (optional): Another trie
 	
-	By default, making a new Trie() will create an empty trie.
+	By default, making a new Trie() will create an empty trie.<br>
 	If you want to make a deep copy, you can use the data from the copied Trie as a parameter
 	
 * 	__add__ - <br>
 	_params_ - $data: A String value, $value (optional): the value stored for this string, default NULL <br>
 	_return_ - true if a word is added in or if a value is changed, false if the word/value already exists 
 	
-	Adds a value into the trie. Ex. $trie->add("word");
+	Adds a value into the trie. <br>Ex. $trie->add("word");
 	
 *	__find__ - <br>
 	_params_ - $data: A String value<br>
 	_return_ - true if the value is found in the trie, false if not
 	
-	Searches for a value in the trie. Ex. $trie->find("word");
+	Searches for a value in the trie. <br>Ex. $trie->find("word");
 	
 *	__delete__ -<br>
 	_params_ - $data: A String value<br>
 	_return_ - true if the value is deleted, false if not found
 	
-	Deletes a value in the trie. Ex. $trie->delete("word");
+	Deletes a value in the trie. <br>Ex. $trie->delete("word");
 	
 *	__getVal__ -<br>
 	_params_ - $data: A String value<br>
 	_return_ - a mixed value
 	
-	Like find but returns the value at that word or false if the word is not found.
+	Like find but returns the value at that word or false if the word is not found.<br>
 	Ex. $trie->getVal("word") returns null (by default) if "word" is found in the trie.
 
 * 	__listWords__ -<br>
 	_params_ - $prefix (optional): A String value, default ""<br>
 	_return_ - an array of words
 	
-	Does a pre-order transversal of the trie starting at the node dictated by $prefix
-	By default returns all the words in the trie sorted alphabetically
-	Ex. If a $trie has two words: "word" and "wow"
+	Does a pre-order transversal of the trie starting at the node dictated by $prefix<br>
+	By default returns all the words in the trie sorted alphabetically<br>
+	Ex. If a $trie has two words: "word" and "wow"<br><br>
 	
-	$trie->listWords() returns array("word","wow")
-	$trie->listWords("wo") returns the same
-	$trie->listWords("wow") returns array("wow")
+	$trie->listWords() returns array("word","wow")<br>
+	$trie->listWords("wo") returns the same<br>
+	$trie->listWords("wow") returns array("wow")<br>
 	$trie->listWords("a") returns an empty array
 
 *	__toJSON__ -<br>

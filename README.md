@@ -21,39 +21,39 @@ Documentation
 The trie supports the basic functions of add, find, and delete.
 
 Functions:
-* 	__Constructor__ -
+* 	__Constructor__ - <br>
 	_params_ - $data (optional): Another trie
 	
 	By default, making a new Trie() will create an empty trie.
 	If you want to make a deep copy, you can use the data from the copied Trie as a parameter
 	
-* 	__add__ -
-	_params_ - $data: A String value, $value (optional): the value stored for this string, default NULL
-	_return_ - true if a word is added in or if a value is changed, false if the word/value already exists
+* 	__add__ - <br>
+	_params_ - $data: A String value, $value (optional): the value stored for this string, default NULL <br>
+	_return_ - true if a word is added in or if a value is changed, false if the word/value already exists 
 	
 	Adds a value into the trie. Ex. $trie->add("word");
 	
-*	__find__ -
-	_params_ - $data: A String value
+*	__find__ - <br>
+	_params_ - $data: A String value<br>
 	_return_ - true if the value is found in the trie, false if not
 	
 	Searches for a value in the trie. Ex. $trie->find("word");
 	
-*	__delete__ -
-	_params_ - $data: A String value
+*	__delete__ -<br>
+	_params_ - $data: A String value<br>
 	_return_ - true if the value is deleted, false if not found
 	
 	Deletes a value in the trie. Ex. $trie->delete("word");
 	
-*	__getVal__ -
-	_params_ - $data: A String value
+*	__getVal__ -<br>
+	_params_ - $data: A String value<br>
 	_return_ - a mixed value
 	
 	Like find but returns the value at that word or false if the word is not found.
 	Ex. $trie->getVal("word") returns null (by default) if "word" is found in the trie.
 
-* 	__listWords__ -
-	_params_ - $prefix (optional): A String value, default ""
+* 	__listWords__ -<br>
+	_params_ - $prefix (optional): A String value, default ""<br>
 	_return_ - an array of words
 	
 	Does a pre-order transversal of the trie starting at the node dictated by $prefix
@@ -65,11 +65,11 @@ Functions:
 	$trie->listWords("wow") returns array("wow")
 	$trie->listWords("a") returns an empty array
 
-*	__toJSON__ -
-	_params_ - $params (optional): parameters to give to json_encode
+*	__toJSON__ -<br>
+	_params_ - $params (optional): parameters to give to json_encode<br>
 	_return_ - A String JSON of the trie
 	
-*	__fromJSON__ -
+*	__fromJSON__ -<br>
 	_params_ - $data: A JSON trie as a String
 	
 	Converts the current trie into the one stored by the JSON (overwrites info)

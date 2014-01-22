@@ -98,6 +98,9 @@ class Trie {
 				if(array_key_exists("vl",$node)) {
 					$prev = &$node;
 					$key = $data{$i};
+				} else if (count($node) > 1) {
+					$prev = &$node;
+					$key = $data{$i};
 				}
 				
 				// Go to next node
